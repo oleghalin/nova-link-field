@@ -64,4 +64,12 @@ class Link extends Field
 
         return $this;
     }
+
+    /**
+     * @return array
+     */
+    public function meta()
+    {
+        return array_merge(['href' => $this->value], $this->meta);
+    }
 }

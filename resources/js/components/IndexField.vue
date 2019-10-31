@@ -1,8 +1,9 @@
 <template>
-    <a :target="field.blank ? field.blank : '_self'" :class="field.classes ? field.classes : defaultClasses"
+    <a v-if="field.value" :target="field.blank ? field.blank : '_self'" :class="field.classes ? field.classes : defaultClasses"
        :href="field.href">
         {{ field.text ? field.text : field.value }}
     </a>
+    <p v-else>&mdash;</p>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-    <a v-if="field.value" :target="field.blank ? field.blank : '_self'" :class="field.classes ? field.classes : defaultClasses"
+    <a v-if="hasValue" :target="field.blank ? field.blank : '_self'" :class="field.classes ? field.classes : defaultClasses"
        :href="field.href">
         {{ field.text ? field.text : field.value }}
     </a>
@@ -17,6 +17,12 @@
                 'text-primary',
                 'font-bold'
             ]
-        })
+        }),
+
+        computed: {
+            hasValue() {
+                return this.field.value !== null
+            },
+        },
     }
 </script>

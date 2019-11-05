@@ -44,7 +44,20 @@ Link::make('Charge Id', 'stripe_id')
                 ->text("Go To Stripe")
 ```
 
-#### Open link in blank window
+### Show icon instead of text
+Replaces text with an icon on the index view. For this needs you can use `icon()` function
+
+Example: 
+``` 
+Link::make('Charge Id', 'stripe_id')
+                ->url(function () {
+                    return "https://dashboard.stripe.com/payments/{$this->stripe_id}";
+                })
+                ->text("Go To Stripe")
+                ->icon()
+```
+
+### Open link in blank window
 For this needs you can use `blank()` function.
 
 Example: 
@@ -56,7 +69,7 @@ Link::make('Charge Id', 'stripe_id')
                 ->blank()
 ```
 
-#### Add additional classes to `<a>`
+### Add additional classes to `<a>`
 For this needs you can use `classes()` function (accept `Callable` or `text`). 
 
 Example: 
@@ -68,5 +81,5 @@ Link::make('Charge Id', 'stripe_id')
 ```
 
 
-### TODO
+## TODO
 - [ ] Cover field with tests

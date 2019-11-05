@@ -66,6 +66,21 @@ class Link extends Field
     }
 
     /**
+     * @param  string  $icon
+     * @return $this
+     */
+    public function icon($icon = 'external-link')
+    {
+        $this->withMeta([
+            'icon'      => $icon,
+        ]);
+
+        $this->textAlign('center');
+
+        return $this;
+    }
+
+    /**
      * @return array
      */
     public function meta()

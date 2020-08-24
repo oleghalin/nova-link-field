@@ -59,7 +59,7 @@ class Link extends Field
     public function text($text)
     {
         $this->withMeta([
-            'text' => $text instanceof Closure ? call_user_func($text) : $text,
+            'text' => is_callable($text) ? call_user_func($text) : $text,
         ]);
 
         return $this;

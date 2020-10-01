@@ -17,7 +17,7 @@
     export default {
         mixins: [FormField, HandlesValidationErrors],
 
-        props: ['resourceName', 'resourceId', 'field'],
+        props: ['resourceName', 'resourceId', 'field', 'showHelpText'],
 
         methods: {
             /*

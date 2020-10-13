@@ -1,5 +1,5 @@
 <template>
-    <default-field :field="field" :errors="errors">
+    <default-field :field="field" :errors="errors" :show-help-text="showHelpText">
         <template slot="field">
             <input :id="field.name" type="text"
                    class="w-full form-control form-input form-input-bordered"
@@ -17,7 +17,7 @@
     export default {
         mixins: [FormField, HandlesValidationErrors],
 
-        props: ['resourceName', 'resourceId', 'field'],
+        props: ['resourceName', 'resourceId', 'field', 'showHelpText'],
 
         methods: {
             /*

@@ -1,5 +1,5 @@
 <template>
-    <div class="flex border-b border-40">
+    <div class="flex flex-col md:flex-row -mx-6 px-6 py-2 md:py-0 space-y-2 md:space-y-0">
         <div class="md:w-1/4 md:py-3">
             <slot>
                 <h4 class="font-normal text-80">
@@ -17,7 +17,7 @@
                 </p>
                 <p v-else>&mdash;</p>
             </slot>
-        </div>
+        </div>app
     </div>
 </template>
 

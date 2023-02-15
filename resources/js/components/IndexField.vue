@@ -1,7 +1,7 @@
 <template>
     <div :class="`text-${field.textAlign}`">
         <a v-if="hasValue" :target="field.blank ? field.blank : '_self'" :class="field.classes ? field.classes : defaultClasses"
-           :href="field.href">
+           :href="field.href" @click.stop>
             <span v-if="field.icon"><Icon :type="field.icon" height="24" view-box="0 0 24 24" width="24"/></span>
             <span v-else>{{ field.text ? field.text : field.value }}</span>
         </a>

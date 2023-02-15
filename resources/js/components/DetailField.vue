@@ -11,7 +11,7 @@
             <slot name="value">
                 <p v-if="field.value" class="text-90">
                     <a :target="field.blank ? field.blank : '_self'" :class="field.classes ? field.classes : defaultClasses"
-                       :href="field.href">
+                       :href="field.href" @click.stop>
                         {{ field.text ? field.text : field.value }}
                     </a>
                 </p>

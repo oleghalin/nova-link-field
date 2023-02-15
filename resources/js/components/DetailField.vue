@@ -17,7 +17,7 @@
                 </p>
                 <p v-else>&mdash;</p>
             </slot>
-        </div>app
+        </div>
     </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-    <default-field :field="field" :errors="errors" :show-help-text="showHelpText">
+    <DefaultField :field="field" :errors="errors" :show-help-text="showHelpText">
         <template slot="field">
             <input :id="field.name" type="text"
                    class="w-full form-control form-input form-input-bordered"
@@ -8,7 +8,7 @@
                    v-model="value"
             />
         </template>
-    </default-field>
+    </DefaultField>
 </template>
 
 <script>
